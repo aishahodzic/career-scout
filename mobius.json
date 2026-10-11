@@ -1,0 +1,41 @@
+{
+  "id": "career-scout",
+  "name": "Career Scout",
+  "version": "0.2.0",
+  "description": "A personal career scout for strong-fit openings, thoughtful outreach, and weekly next moves.",
+  "entry": "index.jsx",
+  "icon": "icon.png",
+  "offline_capable": false,
+  "embeds_agent": true,
+  "permissions": {},
+  "schedule": {
+    "default": "0 8 * * 1",
+    "user_configurable": true,
+    "job": "fetch.sh"
+  },
+  "runtime": {
+    "imports": [
+      "react",
+      "react-dom",
+      "@openai/apps-sdk-ui/components/Icon",
+      "pdfjs-dist"
+    ],
+    "esm_deps": []
+  },
+  "source_files": [
+    "agent-prompt.js",
+    "system-prompt.md",
+    "extract_report.py"
+  ],
+  "store": {
+    "tagline": "Turn your CV and goals into a personal shortlist of roles, companies, and next moves.",
+    "description": "Career Scout turns your CV and a short conversation into a personal career workspace. It builds a skills map and clear positioning, researches current openings and relevant companies to approach, tracks applications, and refreshes the search every week. Searches cover strong, adjacent, and credible stretch opportunities across full-time work, internships, fellowships, funded study, contracts, and other routes that fit the user.\n\nEach installation starts blank. CVs, conversations, profiles, companies, matches, notes, and application history stay in that user\u2019s local app storage and are not included in the published package.",
+    "screenshots": [
+      {
+        "src": "static/store/onboarding.png",
+        "alt": "Career Scout blank profile screen with CV upload, career preference prompts, navigation tabs, and an empty chat.",
+        "label": "Build your profile from a CV and conversation"
+      }
+    ]
+  }
+}
